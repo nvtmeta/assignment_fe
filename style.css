@@ -88,3 +88,10 @@ body {
 .heading_form_content {
     border-bottom: 1px solid #B1AFB4;
 }
+
+.sidebar_menu_item.active{
+    background-color: #e0e0e0;
+}
+
+.view_content_table{
+}
