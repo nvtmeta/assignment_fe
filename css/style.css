@@ -95,3 +95,7 @@ body {
 
 .view_content_table{
 }
+
+.error-message{
+    color: red;
+}

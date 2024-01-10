@@ -17,7 +17,7 @@
         <!-- begin nav -->
         <ul class="nav px-2 nav_container flex justify-content-between align-items-center">
             <div>
-                <p class="logo  fs-3">CMS</p>
+                <p class="logo fs-3">CMS</p>
             </div>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -40,9 +40,9 @@
         </ul>
         <!-- end nav -->
 
-        <main class="w-100 d-flex align-items-start gap-5">
+        <main class="w-100 d-flex sidebar_container align-items-start gap-5">
             <sidebar class="w-20">
-                <div class=" sidebar_container">
+                <div class="sidebar_container">
                     <div class="input-group p-4 ">
                         <input type="search" class="form-control border border-secondary " aria-label="Search"
                             placeholder="Search">
@@ -101,37 +101,8 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
-    <script>
-        document.getElementById("myForm").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent form submission
-            var title = document.getElementById("title").value;
-            var brief = document.getElementById("brief").value;
-            var content = document.getElementById("content").value;
-
-            if (title.length < 10 || title.length > 200) {
-                alert("Title must be between 10 and 200 characters.");
-                return;
-            }
-
-            if (brief.length < 30 || brief.length > 150) {
-                alert("Brief must be between 30 and 150 characters.");
-                return;
-            }
-
-            if (content.length < 50 || content.length > 1000) {
-                alert("Content must be between 50 and 1000 characters.");
-                return;
-            }
-
-            // If all validations pass, you can proceed with further processing
-            // For example, you can call another function to handle form submission
-            submitForm();
-        });
-
-        function submitForm() {
-            // Code to handle form submission
-            document.getElementById("myForm").submit();
-        }
+    <script src="../js/index.js">
+        
     </script>
 </body>
 
