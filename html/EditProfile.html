@@ -31,10 +31,11 @@
                         <a class="text-decoration-none text-muted " href="./EditProfile.html">User
                             Profile</a>
                     </li>
-                    <li class="d-flex dropdown-item mt-2 gap-1  px-2 gap-0 align-items-center ms-3">
+                    <button id="dropdown_item_logout"
+                        class="d-flex dropdown-item mt-2 gap-1  px-2 gap-0 align-items-center ms-3">
                         <i class="bi bi-box-arrow-right "></i>
-                        <a class="text-decoration-none text-muted" href="./login.html">Logout</a>
-                    </li>
+                        <span class="text-decoration-none text-muted">Logout</span>
+                    </button>
                 </ul>
             </div>
         </ul>
@@ -70,7 +71,7 @@
             <content class="w-75">
                 <div class="container_content">
                     <h1 class="mb-5 heading_form_content pb-4">Edit Profile</h1>
-                    <form onsubmit="validateEditForm()" class="card" style="width: 100%;">
+                    <form id="form_edit_profile" class="card" style="width: 100%;">
                         <div class="card-header">Profile Form Elements</div>
                         <div class="card-body">
                             <div class="mb-3">
@@ -85,7 +86,7 @@
                             </div>
                             <div class="mb-3">
                                 <label class="label_form_content" for="email">Email</label>
-                                <p>thinhdikey@gmail.com</p>
+                                <p id="email"></p>
                             </div>
 
                             <div class="mb-3">
@@ -112,8 +113,11 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
-    <script src="../js/index.js">
-     
+    <script type="module" src="../js/EditProfile.js">
+
+    </script>
+    <script type="module" src="../js/index.js">
+
     </script>
 </body>
 

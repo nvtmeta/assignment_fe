@@ -65,6 +65,9 @@ function displayErrorMessage(inputId, message) {
 
 
 export function validateFormRegister() {
+
+
+    
     // Clear any existing validation errors
     document.querySelectorAll('.error-message').forEach(element => element.remove());
 
