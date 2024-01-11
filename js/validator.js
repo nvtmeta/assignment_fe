@@ -1,10 +1,10 @@
 function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    return emailRegex.test(email) && email.length >= 5 && email.length <= 50;
 }
 
 function validatePassword(password) {
-    return password.length >= 6;
+    return password.length >= 8 && password.length <= 30;
 }
 
 function validateRePassword(password, rePassword) {
@@ -52,9 +52,8 @@ export function validateFormLogin() {
 }
 
 
-function displayErrorMessage(inputId, message) {
+export function displayErrorMessage(inputId, message) {
     console.log("inputId: ", inputId, "message: ", message);
-
     const input = document.getElementById(inputId);
     const errorMessage = document.createElement('div');
     errorMessage.classList.add('error-message');
@@ -67,7 +66,7 @@ function displayErrorMessage(inputId, message) {
 export function validateFormRegister() {
 
 
-    
+
     // Clear any existing validation errors
     document.querySelectorAll('.error-message').forEach(element => element.remove());
 
@@ -83,10 +82,16 @@ export function validateFormRegister() {
     if (userName === '') {
         isValid = false;
         displayErrorMessage('userName', 'User Name is required');
+    } else if (userName.length < 3 || userName.length > 30) {
+        isValid = false;
+        displayErrorMessage('userName', 'User Name should be between 3 and 30 characters');
     }
     if (email === '') {
         isValid = false;
         displayErrorMessage('register_email_input', 'Email is required');
+    } else if (email.length < 5) {
+        isValid = false;
+        displayErrorMessage('register_email_input', 'Email should be at least 5 characters long');
     } else if (!validateEmail(email)) {
         isValid = false;
         displayErrorMessage('register_email_input', 'Invalid email');
@@ -94,9 +99,9 @@ export function validateFormRegister() {
     if (password === '') {
         isValid = false;
         displayErrorMessage('register_password_input', 'Password is required');
-    } else if (!validatePassword(password)) {
+    } else if (password.length < 8 || password.length > 30) {
         isValid = false;
-        displayErrorMessage('register_password_input', 'Password should be at least 6 characters long');
+        displayErrorMessage('register_password_input', 'Password should be between 8 and 30 characters long');
     }
     if (rePassword === '') {
         isValid = false;

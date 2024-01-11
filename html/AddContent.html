@@ -7,7 +7,7 @@
     <title>Add Content</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
 </head>
@@ -17,7 +17,7 @@
         <!-- begin nav -->
         <ul class="nav px-2 nav_container flex justify-content-between align-items-center">
             <div>
-                <p class="logo fs-3">CMS</p>
+                <p class="logo  fs-3">CMS</p>
             </div>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -69,7 +69,7 @@
                 </div>
             </sidebar>
             <content class="w-75">
-                <div class="container_content">
+                <form id="submit_add_form" class="container_content">
                     <h1 class="mb-5 heading_form_content pb-4">Add Content</h1>
                     <form id="myForm" class="card" style="width: 100%;">
                         <div class="card-header">Content Form Elements</div>
@@ -93,7 +93,7 @@
                             <button type="reset" class="reset_btn_form">Reset button</button>
                         </div>
                     </form>
-                </div>
+                </for>
             </content>
         </main>
     </div>
@@ -103,7 +103,10 @@
         crossorigin="anonymous"></script>
 
     <script type="module" src="../js/index.js">
-
+    </script>
+    <script type="module" src="../js/AddContent.js">
+    </script>
+    <script type="module" src="../js/validator.js">
     </script>
 </body>
 
