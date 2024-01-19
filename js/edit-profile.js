@@ -26,7 +26,7 @@ function populateFormFields() {
 export function handleSubmit(event) {
   event.preventDefault(); // Prevent the form from submitting
 
-
+console.log("edit profile")
 
   // Clear any existing validation errors
   document.querySelectorAll('.error-message').forEach(element => element.remove());

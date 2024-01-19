@@ -39,6 +39,10 @@ body {
     color: #B1AFB4;
 }
 
+.logo_link {
+    text-decoration: none;
+}
+
 .btn_userProfile {
     border-bottom: 1px solid #B1AFB4;
 }
@@ -69,7 +73,14 @@ body {
 
 .container_content {
     margin-top: 4rem;
-    /* width: 90rem; */
+    background-color: white;
+}
+
+#dynamic-content{
+    overflow: hidden;
+    background-color: white;
+    padding: 20px;
+    height: 100vh;
 }
 
 .submit_btn_form,
@@ -89,13 +100,12 @@ body {
     border-bottom: 1px solid #B1AFB4;
 }
 
-.sidebar_menu_item.active{
+.sidebar_menu_item.active {
     background-color: #e0e0e0;
 }
 
-.view_content_table{
-}
+.view_content_table {}
 
-.error-message{
+.error-message {
     color: red;
 }

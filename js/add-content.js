@@ -2,6 +2,8 @@ import { displayErrorMessage } from "./validator.js";
 
 
 export function handleSubmit(event) {
+
+    console.log("addcontent")
     event.preventDefault(); // Prevent the form from submitting
 
     // Clear any existing validation errors
